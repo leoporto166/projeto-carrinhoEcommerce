@@ -12,7 +12,11 @@ export function Home(){
                 
                 <section className="font-semibold max-w-[250px]"> 
                         <Link to={"/"}>
-                            <img src={produto1} className="w-[250px] h-[250px]"></img>
+                            <img 
+                            src={produto1} 
+                            className="w-[250px] h-[250px]"
+                            alt="produto 1"
+                            ></img>
                             <p>Fone ajdadjajdjdjajdada, adad, dadaadadd</p>
                         </Link>
                         <div className="flex items-center">
