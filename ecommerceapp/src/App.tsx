@@ -2,12 +2,15 @@
 
 import { RouterProvider } from "react-router-dom"
 import { router } from "./router"
+import { CartProvider } from "./context/context"
 
 function App() {
 
 
   return (
-   <RouterProvider router={router} />
+   <CartProvider>
+     <RouterProvider router={router} />
+   </CartProvider>
   )
 }
 
