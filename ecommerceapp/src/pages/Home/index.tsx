@@ -4,6 +4,7 @@ import { MdAddShoppingCart } from "react-icons/md"
 import { Link } from "react-router-dom"
 import { api } from "../../services/api"
 import { CartContext } from "../../context/context"
+import toast from "react-hot-toast"
 
 
 export interface apiProps{
@@ -21,6 +22,7 @@ export function Home(){
     const {addItemCart} = useContext(CartContext)
 
     function handleAddCart(product: apiProps){
+        toast.success("Produto adicionado no carrinho.")
         addItemCart(product);
     }
 
