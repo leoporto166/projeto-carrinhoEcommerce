@@ -5,7 +5,8 @@ import { useContext } from "react"
 
 export function Cart(){
 
-    const { cart } = useContext(CartContext)
+    const { cart, addItemCart, removeItemCart, total } = useContext(CartContext)
+
 
 
     return(
@@ -42,6 +43,7 @@ export function Cart(){
 
                     <div>
                         <button className="bg-gray-500 w-[20px] rounded text-white"
+                        onClick={() => removeItemCart(item)}
                         >
                             -
                         </button>
@@ -49,6 +51,8 @@ export function Cart(){
                         <span className="p-2">{item.amount}</span>
 
                         <button className="bg-gray-500 w-[20px] rounded text-white"
+                        onClick={() => addItemCart(item)}
+                        
                         >
                             +
                         </button>
@@ -66,7 +70,7 @@ export function Cart(){
                 {Array.isArray(cart) && cart.length !== 0 && (
                     <div className="flex w-full max-w-7xl px-1 my-1">
                     <strong>
-                        Total: R$0
+                        Total: {total}
                     </strong>
                 </div>
                 )}
