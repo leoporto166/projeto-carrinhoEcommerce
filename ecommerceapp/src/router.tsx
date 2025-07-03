@@ -5,6 +5,7 @@ import { Home } from "./pages/Home";
 import { Cart } from "./pages/carrrinho";
 import { Layout } from "./components/layout";
 import { Detalhes } from "./pages/Detail";
+import { Error } from "./pages/Error";
 
 const router = createBrowserRouter([
     {
@@ -21,7 +22,11 @@ const router = createBrowserRouter([
             {
                 path: "/detalhes/:id",
                 element: <Detalhes />
-            }
+            },
+            {
+                path: "*",
+                element: <Error />
+            },
 
         ]
 

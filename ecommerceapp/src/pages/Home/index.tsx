@@ -48,7 +48,7 @@ export function Home(){
                 <main className="max-w-7xl mt-10 flex-wrap grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1">
                     {products.map((produto) => (
                         <section className="font-semibold max-w-[250px] mb-5" key={produto.id}>
-                            <Link to={"/carrinho"}>
+                            <Link to={`/detalhes/${produto.id}`}>
                                 <img
                                 src={produto.cover}
                                 className="w-[250px] h-[250px]"
